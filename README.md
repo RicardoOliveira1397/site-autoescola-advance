@@ -40,7 +40,7 @@ Abra `http://localhost:3000`. `npm run dev` gera o build e inicia o servidor; ne
 
 `/`, `/quem-somos/`, `/primeira-habilitacao/`, `/simulador-virtual/`, `/adicao-de-cnh/`, `/reciclagem-cnh/`, `/alunos/`, `/fotos/`, `/avalie-nos/`, `/contato/`.
 
-O build cria um `index.html` para cada rota. Assim, abrir uma URL diretamente ou atualizar a página funciona também em hospedagens estáticas que servem índices de diretório. Publique na raiz do domínio/subdomínio; os caminhos de assets são absolutos.
+O build cria um `index.html` para cada rota. Assim, abrir uma URL diretamente ou atualizar a página funciona também em hospedagens estáticas que servem índices de diretório. Por padrão, publique na raiz do domínio/subdomínio. Para uma subpasta, configure BASE_PATH no build; o workflow do GitHub Pages faz isso automaticamente.
 
 ## GitHub
 
@@ -65,4 +65,10 @@ Siga [docs/HOSTINGER.md](docs/HOSTINGER.md). Resumo: Node.js **24**, instalaçã
 
 As imagens e informações institucionais foram trazidas do site do cliente: https://autoescolaadvance.com.br/. As fontes são carregadas pelo Google Fonts. A área do aluno aponta para serviços externos do Detran-SP; contato, mapas e redes sociais abrem seus respectivos destinos.
 
-Este pacote não foi publicado no GitHub ou na Hostinger. É o código exportado, pronto para você criar o repositório e configurar o deploy. Veja as limitações funcionais em `docs/STATUS.md` antes de substituir o site atual.
+A demonstração é publicada pelo workflow `.github/workflows/pages.yml` a cada push em `main`, com verificação de tipos antes do build. O deploy envia somente `dist/`, sem executar `server.mjs`. Veja as limitações funcionais em `docs/STATUS.md` antes de substituir o site atual.
+
+## Demonstração no GitHub Pages
+
+Endereço: https://ricardooliveira1397.github.io/site-autoescola-advance/
+
+Em Settings → Pages, a origem deve ser GitHub Actions. O workflow obtém o caminho-base do Pages, permitindo abrir e atualizar todas as dez páginas diretamente. Localmente, `npm run dev` continua funcionando na raiz.

@@ -1,8 +1,9 @@
+import { appPathname, basePath } from './paths';
 import { useEffect, useState } from 'react';
 export function usePathname() {
-    const [pathname, setPathname] = useState(window.location.pathname);
+    const [pathname, setPathname] = useState(appPathname());
     useEffect(() => {
-        const update = () => setPathname(window.location.pathname);
+        const update = () => setPathname(appPathname());
         const onClick = (event: MouseEvent) => {
             if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
                 return;
@@ -12,6 +13,7 @@ export function usePathname() {
             const url = new URL(link.href, location.href);
             if (url.origin !== location.origin || !['http:', 'https:'].includes(url.protocol))
                 return;
+            if (basePath && url.pathname !== basePath && !url.pathname.startsWith(basePath + '/')) return;
             if (url.pathname === location.pathname)
                 return;
             event.preventDefault();
