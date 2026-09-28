@@ -30,7 +30,7 @@ Abra `http://localhost:3000`. `npm run dev` gera o build e inicia o servidor; ne
 - `src/navigation.ts`: navegação React e histórico do navegador.
 - `src/globals.css`: estilos base.
 - `src/movement.css`: nova direção visual e responsividade.
-- `src/Motion.tsx`: componentes animados e controle de movimento.
+- `src/Motion.tsx`: componentes animados e preferência de movimento reduzido.
 - `src/paths.ts`: prefixo de URLs para GitHub Pages e domínio próprio.
 - `src/gallery.json`: lista das fotografias.
 - `public/`: imagens e ícone do site.
