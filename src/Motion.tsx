@@ -1,15 +1,14 @@
 import { siteUrl } from './paths';
-import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useRef, type ReactNode } from 'react';
 import { motion, MotionConfig, useReducedMotion, useScroll, useSpring } from 'motion/react';
-import { ArrowUpRight, Pause, Play } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 const MotionPreference = createContext(false);
 export const useQuietMotion = () => useContext(MotionPreference);
 export function MotionProvider({ children }: {
     children: ReactNode;
 }) {
     const systemReduced = useReducedMotion();
-    const [paused, setPaused] = useState(false);
-    const quiet = Boolean(systemReduced || paused);
+    const quiet = Boolean(systemReduced);
     useEffect(() => {
         document.documentElement.dataset.motion = quiet ? 'off' : 'on';
         return () => { delete document.documentElement.dataset.motion; };
@@ -17,9 +16,6 @@ export function MotionProvider({ children }: {
     return <MotionPreference.Provider value={quiet}>
     <MotionConfig reducedMotion={quiet ? 'always' : 'user'}>
       {children}
-      {!systemReduced && <button className="motion-toggle" onClick={() => setPaused(!paused)} aria-pressed={paused} aria-label={paused ? 'Ativar animações' : 'Pausar animações'}>
-        {paused ? <Play size={14}/> : <Pause size={14}/>}<span>{paused ? 'Ativar movimento' : 'Pausar movimento'}</span>
-      </button>}
     </MotionConfig>
   </MotionPreference.Provider>;
 }
