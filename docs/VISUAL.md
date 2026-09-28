@@ -1,6 +1,8 @@
 # Advance em movimento
 
-Atualização visual em React e Motion, com preto e diferentes tons de azul: fundos em azul suave (#496ba5), azul claro (#a7d4f5), azul gelo (#c2dcf2) e preto (#101419). Roxo e lilás foram substituídos nos selos, faixas, cartões, gradientes e estados de interação. Os brilhos dos fundos têm intensidade reduzida; o azul elétrico permanece nos pequenos detalhes da identidade.
+Atualização visual em React e Motion, com uma base contínua em azul-marinho (#071426), superfícies em azul profundo (#0e223a e #15314f), ações em azul claro (#a9d5ff) e títulos claros (#f1f6fc). O tema completo está em src/navy.css, aplicado depois dos estilos de estrutura e movimento. Não há roxo ou lilás.
+
+O fundo escuro acompanha todas as páginas, menus, cartões e formulários. Bordas discretas e diferenças de luminosidade distinguem as seções. Gradientes azuis suaves criam profundidade, enquanto botões claros destacam as ações. O build versiona CSS e JavaScript pelo conteúdo para que novas publicações não reutilizem a paleta antiga do cache.
 
 As unidades ativas são 01 (Vila Industrial, João Jorge, 150) e 03 (Barão Geraldo). A Unidade 02 foi retirada do cadastro, dos cartões e da seleção no contato. A grade apresenta duas colunas no desktop e uma no celular.
 
