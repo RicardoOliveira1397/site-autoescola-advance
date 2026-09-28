@@ -1,6 +1,6 @@
 # Advance em movimento
 
-Atualização visual em React e Motion, com fundos em azul suave (#496ba5), ciano e lavanda. Os brilhos dos fundos têm intensidade reduzida; o azul elétrico permanece nos pequenos detalhes da identidade.
+Atualização visual em React e Motion, com preto e diferentes tons de azul: fundos em azul suave (#496ba5), azul claro (#a7d4f5), azul gelo (#c2dcf2) e preto (#101419). Roxo e lilás foram substituídos nos selos, faixas, cartões, gradientes e estados de interação. Os brilhos dos fundos têm intensidade reduzida; o azul elétrico permanece nos pequenos detalhes da identidade.
 
 As unidades ativas são 01 (Vila Industrial, João Jorge, 150) e 03 (Barão Geraldo). A Unidade 02 foi retirada do cadastro, dos cartões e da seleção no contato. A grade apresenta duas colunas no desktop e uma no celular.
 
