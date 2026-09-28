@@ -28,7 +28,10 @@ Abra `http://localhost:3000`. `npm run dev` gera o build e inicia o servidor; ne
 - `src/Site.tsx`: páginas internas, menu, rodapé, galeria e formulários.
 - `src/content.ts`: conteúdo dos serviços e unidades.
 - `src/navigation.ts`: navegação React e histórico do navegador.
-- `src/globals.css`: estilos e responsividade.
+- `src/globals.css`: estilos base.
+- `src/movement.css`: nova direção visual e responsividade.
+- `src/Motion.tsx`: componentes animados e controle de movimento.
+- `src/paths.ts`: prefixo de URLs para GitHub Pages e domínio próprio.
 - `src/gallery.json`: lista das fotografias.
 - `public/`: imagens e ícone do site.
 - `scripts/build.mjs`: empacotamento e geração dos HTMLs das rotas.
@@ -44,18 +47,11 @@ O build cria um `index.html` para cada rota. Assim, abrir uma URL diretamente ou
 
 ## GitHub
 
-Crie um repositório vazio no GitHub e execute os comandos abaixo **dentro desta pasta**, não na pasta-pai do projeto antigo. Substitua a URL pela URL real do seu repositório:
+Repositório: https://github.com/RicardoOliveira1397/site-autoescola-advance
 
-```sh
-git init
-git add .
-git commit -m "Versão inicial do site Advance"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-git push -u origin main
-```
+A proposta visual está na branch `codex/advance-em-movimento`. A integração em `main` aciona a publicação automática no GitHub Pages. A versão anterior continua disponível no histórico Git (commit `735d8e3`).
 
-O `.gitignore` exclui dependências, build, logs e arquivos de ambiente. O `package.json` deve ficar na raiz do repositório. Não é preciso enviar `node_modules` nem `dist` para o GitHub; a Hostinger gera o build.
+O `.gitignore` exclui dependências, build, logs e arquivos de ambiente. O `package.json` fica na raiz do repositório. Não é preciso versionar `node_modules` ou `dist`.
 
 ## Hostinger
 
